@@ -11,17 +11,17 @@ public class DemoController {
 
     private Chef myChef;
 
-//    //constructor
-//    @Autowired
-//    public DemoController(Chef theChef) {
-//        myChef = theChef;
-//    }
-
-    // setter
+    //constructor
     @Autowired
-    public void setMyChef(Chef theChef) {
+    public DemoController(Chef theChef) {
         myChef = theChef;
     }
+
+//    // setter
+//    @Autowired
+//    public void setMyChef(Chef theChef) {
+//        myChef = theChef;
+//    }
 
     @GetMapping("/dailyrecipe")
     public String getDailyRecipe() {
